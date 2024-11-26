@@ -4,7 +4,7 @@ UNITY_EDITOR_PATH=/Applications/Unity/Hub/Editor/
 PROJECT_PATH=/Users/vantan/Desktop/TeamE
 EXPORT_PATH=/Users/vantan/Library/CloudStorage/GoogleDrive-vtnstorage.2023@gmail.com/その他のパソコン/マイ コンピュータ/Artifacts/Team2024
 LOG_FILE_PATH=$PROJECT_PATH/log/TeamE.log
-GAS_URL=https://script.google.com/macros/s/AKfycbwFE95eSPBTax07d3mrhXX1FKK8uWJnbdqLZM_8toC07dVhlV23yaAWeb8NCFeVa56Q/exec?folder=U2FsdGVkX18rbDp+5PIgDy4oMmlzxnhsBHGt728z2eEldc3qgCn4HtZxjLt6UcKzvEAqC2VDgK8QaSwK+NI2pQ==&team=C
+GAS_URL=https://script.google.com/macros/s/AKfycbwFE95eSPBTax07d3mrhXX1FKK8uWJnbdqLZM_8toC07dVhlV23yaAWeb8NCFeVa56Q/exec?folder=U2FsdGVkX18ZLxH8c+lDvgtWaKeBYB4Y/gYft7IOJcg1zDRQXqmq3/RHTSRQSqfRqQBZ2I52jfKeR9n1O1FxLg==&team=E
 
 # 出力フォルダを処理のたびに削除する
 if [ -e "$PROJECT_PATH/Build" ]; then
