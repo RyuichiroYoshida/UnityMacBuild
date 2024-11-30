@@ -17,7 +17,7 @@ git pull https://github.com/VGA-Team2024/TeamC.git
 
 if [ $? -eq 1 ]; then
     echo "プロジェクトの更新に失敗しました"
-    exit 1
+    exit /b 1
 fi
 
 # Unityビルドコマンドを実行する
@@ -25,14 +25,14 @@ fi
 
 if [ $? -eq 1 ]; then
     cat "./log/TeamC.log"
-    exit 1
+    exit /b 1
 fi
 
 # ビルドファイルの圧縮してGoogleDriveへ配置
 zip -r "TeamC.zip" "$PROJECT_PATH/Build"
 
 if [ $? -eq 1 ]; then
-    exit 1
+    exit /b 1
 fi
 
 mv "$PROJECT_PATH/TeamC.zip" "$EXPORT_PATH"
