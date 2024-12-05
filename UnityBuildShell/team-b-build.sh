@@ -27,13 +27,14 @@ if [ $? -eq 1 ]; then
     exit 1
 fi
 
-# ビルドファイルの圧縮してGoogleDriveへ配置
-zip -r "TeamB.zip" "$PROJECT_PATH/Build"
+# ビルドファイルを圧縮
+zip -r "MacTeamB.zip" "$PROJECT_PATH/Build"
 
 if [ $? -eq 1 ]; then
     exit 1
 fi
 
+# Google Driveへ移動
 mv "$PROJECT_PATH/TeamB.zip" "$EXPORT_PATH"
 
 curl -f "$GAS_URL"
