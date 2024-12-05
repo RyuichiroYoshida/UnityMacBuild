@@ -2,7 +2,7 @@
 UNITY_VERSION=2022.3.48f1
 UNITY_EDITOR_PATH=/Applications/Unity/Hub/Editor/
 PROJECT_PATH=/Users/vantan/Desktop/TeamC
-EXPORT_PATH="/Users/vantan/Library/CloudStorage/GoogleDrive-vtnstorage.2023@gmail.com/その他のパソコン/マイ コンピュータ/Artifacts/Team2024"
+EXPORT_PATH="/Users/vantan/Library/CloudStorage/GoogleDrive-vtnstorage.2023@gmail.com/その他のパソコン/マイ コンピュータ/Artifacts/Team2024/TeamC"
 LOG_FILE_PATH=$PROJECT_PATH/log/TeamC.log
 GAS_URL="https://script.google.com/macros/s/AKfycbz8goqh4NBZpD6v-mp4WCSoEZlPHuhOC2Yz5gq884ykcD0eP7lfBhVapedfLMUhzzAqjw/exec?folder=U2FsdGVkX18rbDp+5PIgDy4oMmlzxnhsBHGt728z2eEldc3qgCn4HtZxjLt6UcKzvEAqC2VDgK8QaSwK+NI2pQ==&team=C"
 
@@ -27,14 +27,17 @@ if [ $? -eq 1 ]; then
     exit 1
 fi
 
+# プロジェクトフォルダに移動
+cd "$PROJECT_PATH"
+
 # ビルドファイルを圧縮
-zip -r "MacTeamC.zip" "$PROJECT_PATH/Build"
+zip -r MacTeamC.zip Build/
 
 if [ $? -eq 1 ]; then
     exit 1
 fi
 
 # Google Driveへ移動
-mv "$PROJECT_PATH/TeamC.zip" "$EXPORT_PATH"
+mv "$PROJECT_PATH/MacTeamC.zip" "$EXPORT_PATH"
 
 curl -f "$GAS_URL"
