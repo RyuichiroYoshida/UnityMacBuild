@@ -1,10 +1,5 @@
-# 環境変数の定義
-UNITY_VERSION=2022.3.48f1
-UNITY_EDITOR_PATH=/Applications/Unity/Hub/Editor/
-PROJECT_PATH=/Users/vantan/Desktop/TeamE
-EXPORT_PATH="/Users/vantan/Library/CloudStorage/GoogleDrive-vtnstorage.2023@gmail.com/その他のパソコン/マイ コンピュータ/Artifacts/Team2024/TeamE"
-LOG_FILE_PATH=$PROJECT_PATH/log/TeamE.log
-GAS_URL="https://script.google.com/macros/s/AKfycbz8goqh4NBZpD6v-mp4WCSoEZlPHuhOC2Yz5gq884ykcD0eP7lfBhVapedfLMUhzzAqjw/exec?folder=U2FsdGVkX18ZLxH8c+lDvgtWaKeBYB4Y/gYft7IOJcg1zDRQXqmq3/RHTSRQSqfRqQBZ2I52jfKeR9n1O1FxLg==&team=E"
+# 環境変数を.envファイルから読み込む
+source ./e.env
 
 # 出力フォルダを処理のたびに削除する
 if [ -e "$PROJECT_PATH/Build" ]; then
